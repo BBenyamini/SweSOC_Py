@@ -33,6 +33,8 @@ graph TD
     SOC --> SOCsim[Simulated SOC over time]
 
 ```
+Each of these operator blocks (the square blocks) can be represented by different functions, and will be written as a separate module. All modules operating the same function will be interchangeable.
+
 
 # General SOC model structure
 Any compartmental soil organic matter decomposition model can be written as:
