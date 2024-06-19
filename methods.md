@@ -70,7 +70,29 @@ The functions collected in this library are from various models
 ### Temperature scaling functions
 #### RothC
 
-#### ICBMa: Arrhenius
+#### ICBMa: Andren and Kätterer
+The dependence of decomposition rates on soil temperature was calculated following Andren and Katterer 2001 equation (27)
+The function calculates the effects of temperature $T$ on decomposition rates based on an exponential relationship between a maximum $T_{max}$ and a minimum $T_{min}$
+But since the function is symmetric it requires another condition for temperatures $<T_{min}$.
+
+$$
+\xi_{temp} = = 
+\begin{cases} 
+0 & \text{if } \text{T}_{i,j} < T_{min} \\
+\xi_{temp} & \frac{[T-(T_{min})]^2}{[T_{max}-(T_{min})]^2}
+\end{cases}
+$$
+
+The function can be implemented in Python as:
+
+````python
+def Andren_Katterer(TempC, Tempmin, Tempmax):
+    rateandren=((TempC-Tempmin)**2)/(Tempmax-Tempmin)**2
+    rateandren=np.where(rateandren<-4, np.nan, rateandren)
+    return rateandren
+````
+In the original formulation $T_{min}=-4$ and $T_{max}=23ß$
+
 
 #### ICBMb: Ratkowski
 
