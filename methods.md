@@ -79,7 +79,7 @@ The functions collected in this library are from various models
 #### ICBMa: Andren and Kätterer
 The dependence of decomposition rates on soil temperature was calculated following Andren and Katterer 2001 equation (27)
 The function calculates the effects of temperature $T$ on decomposition rates based on an exponential relationship between a maximum $T_{max}$ and a minimum $T_{min}$.
-But since the function is symmetric it requires another condition for temperatures $T<T_{min}$.  
+But since the function is symmetric it requires another condition for temperatures $T < T_{min}$.  
 So For $T_{i,j} < T_{min}$, $\xi_{temp} = 0$. Otherwise:
 
 $$
