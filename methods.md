@@ -3,7 +3,7 @@
 
 
 # Scope
-This documents describes the theory behind the library of functions developed for the SweSOC project.  
+This documents describes the theory behind the library of functions developed for the "Carbon sequestration in Swedish cropland soils" project (FORMAS).  
 The library is a generic and modular SOC modeling framework, including a few models and climate scaling functions, together with a few implementation of Bayesian model comparison approaches. The frameworks is built for modularity and generalization, so that all functions can be combined easily with each other.  
 The main purpose of this document is to provide documentation for each building block (with emphasis on the collection of scaling functions and SOC decomposition models).
 
